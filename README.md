@@ -1,6 +1,9 @@
 ## CNN Web Scraping Spider
+
 This Python code defines a web scraping spider using Scrapy to extract information from the CNN website and save it in a CSV file.  
 Below, is the key components and functionalities of the code:
+
+#Demo Video: https://youtu.be/fOO04dZ9-2A
 
 ### Dependencies:
 
@@ -31,6 +34,7 @@ sections: Lists various sections of the website to scrape.
 start_urls: Generates a list of starting URLs by joining the base URL with each section.
 
 csv_file: Defines the name of the CSV file where data will be stored.
+
 
 ### Functions
 
@@ -67,6 +71,34 @@ Appends the title and local image path to the CSV file.
 
 In summary, this code defines a Scrapy spider named "cnnspidey" that crawls CNN's website, extracts article titles and images, and saves them to a CSV file. The spider can be configured with a specific date and depth, and it limits its scraping based on these parameters. Images are downloaded and saved locally for each article.
 
+
+## Replication
+
+Python: Ensure that you have Python installed on your system. You can download and install Python from the official website: Python Downloads.
+
+Scrapy: Install the Scrapy framework using pip, which is the package manager for Python:
+
+pip install scrapy
+
+Clone the Repository: Clone it to your local machine using Git:
+
+git clone <repository_url>
+Navigate to the Project Directory: Change your current directory to the project directory:
+
+cd <project_directory>
+Create a Virtual Environment (Optional): It's a good practice to work within a virtual environment to manage dependencies. Create and activate a virtual environment:
+
+python -m venv venv
+venv\Scripts\activate
+Install Dependencies: Install the required Python libraries specified in the code (Scrapy, urllib, datetime, requests, os, csv):
+
+pip install urllib3 requests
+Run the Spider: Execute the Scrapy spider by running the following command:
+
+scrapy crawl cnnspidey -o cnn_data.json
+This command will start the web scraping process using the "cnnspidey" spider and save the extracted data to a JSON file named "cnn_data.json." You can change the output format and filename as needed (e.g., CSV, XML).
+
+
 ### Limitations
 
 The code may not work if the structure of the CNN website changes.
@@ -76,6 +108,7 @@ It assumes a specific format for dates in URLs.
 Error handling for network issues or website changes is limited.
 
 Large-scale scraping may be subject to rate limiting and legal considerations.
+
 
 ### Future Scope
 Potential improvements and extensions for this code include:
