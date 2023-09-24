@@ -1,8 +1,8 @@
 This Python code defines a web scraping spider using Scrapy to extract information from the CNN website and save it in a CSV file. 
 
-Core functionality:
+##WORKING:-
 
-Import necessary libraries:
+#Import necessary libraries:
 
 scrapy: Scrapy is a Python web scraping framework.
 urljoin: Used to join relative and absolute URLs.
@@ -12,7 +12,7 @@ os: Provides functions for working with the operating system.
 csv: Allows reading and writing CSV files.
 Define a class named CnnspideySpider that inherits from Scrapy's Spider class.
 
-Define class attributes:
+#Define class attributes:
 
 name: Specifies the spider's name as "cnnspidey."
 allowed_domains: Lists the allowed domain(s) for scraping (in this case, "edition.cnn.com").
@@ -20,6 +20,9 @@ base_url: Specifies the base URL for the CNN website.
 sections: Lists various sections of the website to scrape.
 start_urls: Generates a list of starting URLs by joining the base URL with each section.
 csv_file: Defines the name of the CSV file where data will be stored.
+
+#Functions
+
 Implement the __init__ method:
 
 Initializes the spider with optional parameters date and depth.
