@@ -43,7 +43,7 @@ class CnnspideySpider(scrapy.Spider):
     
     def handle_error(self, failure):
         self.log(f"Failed to fetch URL: {failure.request.url} - {failure.value}")
-
+print("hello")
     def parse(self, response):
         if self.depth < self.max_depth:
             link_elements = response.css('a.container__link')  
